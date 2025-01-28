@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const port = process.env.PORT || 3000
 
 let notes = [
     {
@@ -83,7 +84,6 @@ app.post('/api/notes', (request, response) => {
     response.json(note)
   })
 
-const PORT = 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+    console.log(`Server running on port ${port}`)
 })
